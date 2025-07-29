@@ -1,0 +1,25 @@
+Extract the following details from the invoice text:
+
+Receipt date, Store, Total. And the individual items, icluding their item name, price, and amount
+
+Return the data in JSON format like this:
+
+{
+
+"Receipt date": {"type": "string", "format": "YYYY-MM-DD"},
+
+"Store": {"type": "string"},
+
+"Total": {"type": "number"},
+
+"Items": [
+
+{"Item": {"type": "string"}, "Price": {"type": "number"}, "Amount": {"type": "number"}}
+
+]
+
+}
+
+Be careful, the "Price" here refers to the unit price, not the total price. For example, "農協ミルクモナカ北海道 198 (2個 X 単99)", the price should be 99, not 198. Or from "アカディおなかに 特 ¥438 (2個 X @219)", the price should be 219, not 438.
+
+Also, sometimes there were discounts items (割引), also include these values and make sure they are negative. For example, "割引 40% -144", then "Item" should be "割引", Amount should be 1, and Price should be -144.

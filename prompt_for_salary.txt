@@ -1,0 +1,33 @@
+Please extract the following information from the payslip pdf attached and return it as a JSON object.
+The JSON object must conform to the following schema:
+{
+  "type": "object",
+  "properties": {
+    "支給日": {"type": "string"},
+    "基本給(月給)": {"type": "number"},
+    "IDECO": {"type": "number"},
+    "健康保険料": {"type": "number"},
+    "介護保険料": {"type": "number"},
+    "厚生年金保険": {"type": "number"},
+    "雇用保険料": {"type": "number"},
+    "所得税": {"type": "number"},
+    "住民税": {"type": "number"},
+    "その他-合計": {"type": "number"},
+    "振込支給額-合計": {"type": "number"}
+  }
+}
+
+Extract:
+- 支給日: The issued date in YYYY-MM-DD format
+- 基本給(月給): The brutto income.
+- IDECO: The portion diverted to my IDECO
+- 健康保険料: My health insurance
+- 介護保険料: My monthly retirement contribution
+- 厚生年金保険: My Kousei contribution
+- 雇用保険料: My unemployment insurance
+- 所得税: My income tax
+- 住民税: My Japanese residence tax
+- その他-合計: This is the "合計" value in the "そ の 他" box
+- 振込支給額-合計: This is the "合計" value in the "振 込 支 給 額" box. It is my netto income after all the deduction.
+
+Return only the JSON object, no additional text or explanations.
