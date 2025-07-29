@@ -3,7 +3,7 @@
 
   
 
-This repository contains code and data for my article "[From Paper Clutter to Financial Clarity with Make.com and Gemini AI](https://dgg32.medium.com/duckdb-as-a-drugdb-a-free-and-simple-multi-model-drug-and-trial-database-83c222d1e9dd)".
+This repository contains code and data for my article "[From Paper Clutter to Financial Clarity with Make.com and Gemini AI](https://dgg32.medium.com/from-paper-clutter-to-financial-clarity-with-make-com-and-gemini-ai-137487f14e33)".
 
 
 
